@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>My Recipe Box</h1>
-    <h3>A Collection of Delicious</h3>
+    <h3>{{tagline}}</h3>
   </div>
   `
 })
 
 export class AppComponent {
-
+  tagline: string = 'A Collection of Delicious';
 }
