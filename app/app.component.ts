@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>My Recipe Box</h1>
+    <h3>A Collection of Delicious</h3>
   </div>
   `
 })
