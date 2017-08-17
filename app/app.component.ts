@@ -15,7 +15,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   tagline: string = 'A Collection of Delicious';
-  firstRecipe = {
-    name: "Lazy Sunday Pasta"
-  }
+  firstRecipe: Recipe = new Recipe("Lazy Sunday Pasta");
+}
+
+export class Recipe {
+  constructor(public name: string) { }
 }
