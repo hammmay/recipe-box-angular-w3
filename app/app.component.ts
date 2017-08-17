@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <h1>My Recipe Box</h1>
     <h3>{{tagline}}</h3>
     <ul>
-      <li>{{firstRecipe.name}}</li>
+      <li *ngFor="let currentRecipe of recipes">{{currentRecipe.title}}</li>
     </ul>
   </div>
   `
@@ -15,9 +15,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   tagline: string = 'A Collection of Delicious';
-  firstRecipe: Recipe = new Recipe("Lazy Sunday Pasta");
+  recipes: Recipe[] = [
+    new Recipe('Lazy Sunday Pasta'),
+    new Recipe('Easy Lentil Soup'),
+    new Recipe('Protein Pancakes')
+  ];
+
 }
 
 export class Recipe {
-  constructor(public name: string) { }
+  constructor(public title: string) { }
 }
